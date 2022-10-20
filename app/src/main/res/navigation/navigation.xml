@@ -10,4 +10,9 @@
         android:name="com.github.iamcrysun.dieordie.GreetingFragment"
         android:label="fragment_greeting"
         tools:layout="@layout/fragment_greeting" />
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.github.iamcrysun.dieordie.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" />
 </navigation>
