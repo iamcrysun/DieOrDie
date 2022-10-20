@@ -48,6 +48,7 @@ class RegistrationFragment : Fragment() {
         val passwordConfirmField =
             view?.findViewById<TextView>(R.id.password_confirm_input_edit_text)
 
+        //TODO: check whitespaces
         return !emailField?.text.isNullOrEmpty() &&
                 !passwordField?.text.isNullOrEmpty() &&
                 !passwordConfirmField?.text.isNullOrEmpty() &&
