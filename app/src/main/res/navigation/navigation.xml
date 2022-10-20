@@ -35,4 +35,9 @@
         android:name="com.github.iamcrysun.dieordie.DoctorsListFragment"
         android:label="fragment_doctors_list"
         tools:layout="@layout/fragment_doctors_list" />
+    <fragment
+        android:id="@+id/historyListFragment"
+        android:name="com.github.iamcrysun.dieordie.HistoryListFragment"
+        android:label="fragment_history_list"
+        tools:layout="@layout/fragment_history_list" />
 </navigation>
