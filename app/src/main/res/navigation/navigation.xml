@@ -20,4 +20,9 @@
         android:name="com.github.iamcrysun.dieordie.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="com.github.iamcrysun.dieordie.MainMenuFragment"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu" />
 </navigation>
