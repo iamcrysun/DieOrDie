@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.github.iamcrysun.dieordie.R
@@ -16,7 +17,7 @@ class MainMenuFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_main_menu, container, false)
 
-        val menuItems = view.findViewById<RecyclerView>(R.id.menu_items)
+        val menuItems = view.findViewById<LinearLayout>(R.id.menu_items)
 
         val menuItemsTitles = arrayOf(
             "Запись на прием",
