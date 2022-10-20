@@ -25,4 +25,9 @@
         android:name="com.github.iamcrysun.dieordie.MainMenuFragment"
         android:label="fragment_main_menu"
         tools:layout="@layout/fragment_main_menu" />
+    <fragment
+        android:id="@+id/doctorAppointmentFragment"
+        android:name="com.github.iamcrysun.dieordie.DoctorAppointmentFragment"
+        android:label="fragment_doctor_appointment"
+        tools:layout="@layout/fragment_doctor_appointment" />
 </navigation>
