@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/greetingFragment"
-        android:name="com.github.iamcrysun.dieordie.GreetingFragment"
+        android:name="com.github.iamcrysun.dieordie.views.fragments.GreetingFragment"
         android:label="fragment_greeting"
         tools:layout="@layout/fragment_greeting" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="com.github.iamcrysun.dieordie.RegistrationFragment"
+        android:name="com.github.iamcrysun.dieordie.views.fragments.RegistrationFragment"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration" >
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.github.iamcrysun.dieordie.LoginFragment"
+        android:name="com.github.iamcrysun.dieordie.views.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainMenuFragment"
-        android:name="com.github.iamcrysun.dieordie.MainMenuFragment"
+        android:name="com.github.iamcrysun.dieordie.views.fragments.MainMenuFragment"
         android:label="fragment_main_menu"
         tools:layout="@layout/fragment_main_menu" >
         <action
@@ -64,7 +64,7 @@
     </fragment>
     <fragment
         android:id="@+id/doctorAppointmentFragment"
-        android:name="com.github.iamcrysun.dieordie.DoctorAppointmentFragment"
+        android:name="com.github.iamcrysun.dieordie.views.fragments.DoctorAppointmentFragment"
         android:label="fragment_doctor_appointment"
         tools:layout="@layout/fragment_doctor_appointment" >
         <action
@@ -73,7 +73,7 @@
     </fragment>
     <fragment
         android:id="@+id/doctorsListFragment"
-        android:name="com.github.iamcrysun.dieordie.DoctorsListFragment"
+        android:name="com.github.iamcrysun.dieordie.views.fragments.DoctorsListFragment"
         android:label="fragment_doctors_list"
         tools:layout="@layout/fragment_doctors_list" >
         <action
@@ -82,7 +82,7 @@
     </fragment>
     <fragment
         android:id="@+id/historyListFragment"
-        android:name="com.github.iamcrysun.dieordie.HistoryListFragment"
+        android:name="com.github.iamcrysun.dieordie.views.fragments.HistoryListFragment"
         android:label="fragment_history_list"
         tools:layout="@layout/fragment_history_list" >
         <action
@@ -91,7 +91,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.github.iamcrysun.dieordie.ProfileFragment"
+        android:name="com.github.iamcrysun.dieordie.views.fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
