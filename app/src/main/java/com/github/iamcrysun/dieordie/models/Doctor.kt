@@ -1,10 +1,11 @@
 package com.github.iamcrysun.dieordie.models
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Doctor (
-    @SerializedName("id") val id: Int,
-    @SerializedName("full_name") val fullName: String,
-    @SerializedName("specialization") val specialization: String,
-    @SerializedName("info") val info: String,
+    val id: Int,
+    val fullName: String,
+    val specialization: String,
+    val info: String,
 )
