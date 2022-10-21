@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.github.iamcrysun.dieordie.R
 
@@ -35,6 +36,9 @@ class MainMenuFragment : Fragment() {
 
         for (i in 0..3) {
             val menuItemView = inflater.inflate(R.layout.main_menu_item, container, false)
+            menuItemView.setOnClickListener {
+                findNavController().navigate(R.id.action_mainMenuFragment_to_doctorsListFragment)
+            }
 
             val header = menuItemView.findViewById<TextView>(R.id.menu_item_header)
             header.text = menuItemsTitles[i]
