@@ -73,7 +73,7 @@
     </fragment>
     <fragment
         android:id="@+id/doctorsListFragment"
-        android:name="com.github.iamcrysun.dieordie.views.fragments.DoctorsListFragment"
+        android:name="com.github.iamcrysun.dieordie.views.fragments.doctors_list.DoctorsListFragment"
         android:label="fragment_doctors_list"
         tools:layout="@layout/fragment_doctors_list" >
         <action
