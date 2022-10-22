@@ -1,18 +1,18 @@
 package com.github.iamcrysun.dieordie.views.fragments.doctors_list
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.github.iamcrysun.dieordie.R
 import com.github.iamcrysun.dieordie.models.Doctor
-import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.Json.Default.decodeFromString
-import kotlinx.serialization.json.JsonNull.serializer
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import java.io.BufferedReader
+
 
 class DoctorsListFragment : Fragment() {
     override fun onCreateView(
@@ -34,10 +34,12 @@ class DoctorsListFragment : Fragment() {
     }
 
     private fun readDataFromJSON(filename: String): List<Doctor> {
+        val gson = Gson()
+
         val bufferedReader: BufferedReader =
             requireContext().assets.open(filename).bufferedReader()
         val inputString = bufferedReader.use { it.readText() }
 
-        return decodeFromString<List<Doctor>>(, inputString)
+        return gson.fromJson(inputString, object : TypeToken<ArrayList<Doctor?>?>() {}.type)
     }
 }
