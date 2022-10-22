@@ -4,14 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="8sp"
-    android:background="@color/menu_item"
-    app:layout_constraintCircleRadius="8sp">
+    android:background="@drawable/rounded_card"
+    android:padding="16sp">
 
     <TextView
         android:id="@+id/menu_item_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:text="Название"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,6 +21,7 @@
         android:id="@+id/menu_item_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="15sp"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing
         elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         app:layout_constraintStart_toStartOf="parent"
