@@ -36,6 +36,7 @@ class MainMenuFragment : Fragment() {
 
         for (i in 0..3) {
             val menuItemView = inflater.inflate(R.layout.main_menu_item, container, false)
+
             menuItemView.setOnClickListener {
                 findNavController().navigate(R.id.action_mainMenuFragment_to_doctorsListFragment)
             }

@@ -18,6 +18,10 @@ class RegistrationFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_registration, container, false)
 
+        view.findViewById<Button>(R.id.button_from_log_to_greeting).setOnClickListener {
+            findNavController().navigate(R.id.action_registrationFragment_to_greetingFragment)
+        }
+
         view.findViewById<Button>(R.id.create_account_button).setOnClickListener {
             if (validateRegistrationForm()) {
                 Toast
