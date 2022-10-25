@@ -10,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.github.iamcrysun.dieordie.R
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class RegistrationFragment : Fragment() {
     override fun onCreateView(
@@ -18,7 +19,7 @@ class RegistrationFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_registration, container, false)
 
-        view.findViewById<Button>(R.id.button_from_log_to_greeting).setOnClickListener {
+        view.findViewById<FloatingActionButton>(R.id.button_from_log_to_greeting).setOnClickListener {
             findNavController().navigate(R.id.action_registrationFragment_to_greetingFragment)
         }
 
