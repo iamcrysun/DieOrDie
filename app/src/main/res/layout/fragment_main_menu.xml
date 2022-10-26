@@ -9,13 +9,41 @@
 
     <LinearLayout
         android:id="@+id/menu_items"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        tools:listitem="@layout/main_menu_item"
+        android:layout_width="350dp"
+        android:layout_height="577dp"
+        android:orientation="vertical"
+        android:dividerHeight="8sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:orientation="vertical" />
+        app:layout_constraintVertical_bias="0.606"
+        tools:listitem="@layout/main_menu_item" />
+
+    <TextView
+        android:id="@+id/name_string2"
+        android:layout_width="412dp"
+        android:layout_height="87dp"
+        android:background="@color/secondary_background"
+        android:fontFamily="serif"
+        android:shadowRadius="1"
+        android:text="\nРегистратура \nГородской поликлиники"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/exittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="----------Выход----------"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_items" />
 </androidx.constraintlayout.widget.ConstraintLayout>

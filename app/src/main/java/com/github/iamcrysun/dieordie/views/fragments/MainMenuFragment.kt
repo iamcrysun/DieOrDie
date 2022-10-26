@@ -36,9 +36,10 @@ class MainMenuFragment : Fragment() {
 
         for (i in 0..3) {
             val menuItemView = inflater.inflate(R.layout.main_menu_item, container, false)
-
-            menuItemView.setOnClickListener {
-                findNavController().navigate(R.id.action_mainMenuFragment_to_doctorsListFragment)
+            if (i==1) {
+                menuItemView.setOnClickListener {
+                    findNavController().navigate(R.id.action_mainMenuFragment_to_doctorsListFragment)
+                }
             }
 
             val header = menuItemView.findViewById<TextView>(R.id.menu_item_header)
@@ -48,6 +49,9 @@ class MainMenuFragment : Fragment() {
             description.text = menuItemsDescriptions[i]
 
             menuItems.addView(menuItemView)
+        }
+        view.findViewById<TextView>(R.id.exittext).setOnClickListener {
+            findNavController().navigate(R.id.action_mainMenuFragment_to_greetingFragment)
         }
 
         return view

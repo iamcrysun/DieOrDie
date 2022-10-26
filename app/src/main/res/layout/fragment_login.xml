@@ -49,7 +49,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/email_input_edit_text3"
+        android:id="@+id/password_input_edit_text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8sp"
@@ -59,7 +59,7 @@
         android:ems="22"
         android:fontFamily="casual"
         android:hint="Введите пароль"
-        android:inputType="textEmailAddress"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,13 +71,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="104dp"
         android:fontFamily="serif"
         android:shadowRadius="1"
         android:text="Вход"
-        android:textStyle="bold"
         android:textColor="@color/white"
         android:textSize="50sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
