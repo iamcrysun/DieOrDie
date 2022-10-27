@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/name_string1"
+        android:id="@+id/stringreg"
         android:layout_width="412dp"
         android:layout_height="87dp"
         android:background="@color/secondary_background"
