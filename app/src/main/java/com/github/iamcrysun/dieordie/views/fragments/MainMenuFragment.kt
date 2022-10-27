@@ -16,8 +16,9 @@ class MainMenuFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //размещение фрагмента в контейнере статически
         val view = inflater.inflate(R.layout.fragment_main_menu, container, false)
-
+        //ищем меню
         val menuItems = view.findViewById<LinearLayout>(R.id.menu_items)
 
         val menuItemsTitles = arrayOf(
@@ -36,20 +37,22 @@ class MainMenuFragment : Fragment() {
 
         for (i in 0..3) {
             val menuItemView = inflater.inflate(R.layout.main_menu_item, container, false)
+            //т.к сейчас дейтсвие перехода рассчитано только для одного пункта меня, то навешиваем его по условию
             if (i==1) {
                 menuItemView.setOnClickListener {
                     findNavController().navigate(R.id.action_mainMenuFragment_to_doctorsListFragment)
                 }
             }
-
+            //заголовки списков меню
             val header = menuItemView.findViewById<TextView>(R.id.menu_item_header)
             header.text = menuItemsTitles[i]
-
+            //описание пунктов мегю
             val description = menuItemView.findViewById<TextView>(R.id.menu_item_description)
             description.text = menuItemsDescriptions[i]
-
+            //добавляем меню на вьюху
             menuItems.addView(menuItemView)
         }
+        // переход от главного меню на стартовую страничку
         view.findViewById<TextView>(R.id.exittext).setOnClickListener {
             findNavController().navigate(R.id.action_mainMenuFragment_to_greetingFragment)
         }

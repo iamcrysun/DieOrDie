@@ -1,6 +1,7 @@
 package com.github.iamcrysun.dieordie.views.fragments
 
 import android.os.Bundle
+import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -55,8 +56,14 @@ class RegistrationFragment : Fragment() {
 
         //TODO: check whitespaces
         return !emailField?.text.isNullOrEmpty() &&
+                emailField?.text?.isEmailValid()==true &&
                 !passwordField?.text.isNullOrEmpty() &&
                 !passwordConfirmField?.text.isNullOrEmpty() &&
+                //android.util.Patterns.EMAIL_ADDRESS.matcher().matches() &&
                 passwordField?.text.toString() == passwordConfirmField?.text.toString()
+    }
+
+    private fun CharSequence.isEmailValid(): Boolean{
+        return !TextUtils.isEmpty(this) && android.util.Patterns.EMAIL_ADDRESS.matcher(this).matches()
     }
 }

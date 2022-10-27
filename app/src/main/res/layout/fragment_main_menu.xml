@@ -9,15 +9,14 @@
 
     <LinearLayout
         android:id="@+id/menu_items"
-        android:layout_width="350dp"
-        android:layout_height="577dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:dividerHeight="8sp"
+        android:layout_marginTop="90sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.606"
         tools:listitem="@layout/main_menu_item" />
 
     <TextView
@@ -41,7 +40,6 @@
         android:id="@+id/exittext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:text="----------Выход----------"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -7,6 +7,6 @@
     <string name="login_button_text">Войти</string>
     <string name="registration_button_text">Зарегистрироваться</string>
     <string name="email_input_label_text">Электронная почта:</string>
-    <string name="password_label_text">Пароль</string>
+    <string name="password_label_text">Пароль:</string>
     <string name="password_confirm_label_text">Подтверждение пароля</string>
 </resources>

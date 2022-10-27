@@ -23,9 +23,9 @@ class DoctorsListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_doctors_list, container, false)
-
+        //список докторов
         val data = readDataFromJSON("data.json")
-
+        //
         val adapter = ListAdapter()
         val doctorsListView = view.findViewById<RecyclerView>(R.id.doctors_list_view)
         doctorsListView.adapter = adapter
@@ -37,10 +37,12 @@ class DoctorsListFragment : Fragment() {
     }
 
     private fun readDataFromJSON(filename: String): List<Doctor> {
+        //экземпляр объекта для работы с
         val gson = Gson()
-
+        //буффер для чтения
         val bufferedReader: BufferedReader =
             requireContext().assets.open(filename).bufferedReader()
+        //читает текст в строку
         val inputString = bufferedReader.use { it.readText() }
 
         return gson.fromJson(inputString, object : TypeToken<ArrayList<Doctor?>?>() {}.type)
