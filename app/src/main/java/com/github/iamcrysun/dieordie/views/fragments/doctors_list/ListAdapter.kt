@@ -11,7 +11,7 @@ class ListAdapter : RecyclerView.Adapter<DoctorCardViewHolder>() {
     private var doctorsList = emptyList<Doctor>()
     //строка списка
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DoctorCardViewHolder {
-        return DoctorCardViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.doctor_card, parent, false))
+        return DoctorCardViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.doctor_card_item, parent, false))
     }
     //дата к списку
     override fun onBindViewHolder(holder: DoctorCardViewHolder, position: Int) {
