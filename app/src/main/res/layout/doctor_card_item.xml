@@ -5,7 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/rounded_card"
     android:layout_margin="8sp"
-    android:padding="16sp">
+    android:padding="16sp"
+    android:id="@+id/doctor_card_item">
 
     <TextView
         android:id="@+id/doctor_name"
