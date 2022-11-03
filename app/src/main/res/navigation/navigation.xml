@@ -106,7 +106,11 @@
     </fragment>
     <fragment
         android:id="@+id/doctorsDetailedFragment"
-        android:name="com.github.iamcrysun.dieordie.DoctorsDetailedFragment"
+        android:name="com.github.iamcrysun.dieordie.views.fragments.DoctorsDetailedFragment"
         android:label="fragment_doctors_detailed"
-        tools:layout="@layout/fragment_doctors_detailed" />
+        tools:layout="@layout/fragment_doctors_detailed" >
+        <action
+            android:id="@+id/action_doctorsDetailedFragment_to_doctorsListFragment"
+            app:destination="@id/doctorsListFragment" />
+    </fragment>
 </navigation>
