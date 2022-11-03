@@ -79,6 +79,9 @@
         <action
             android:id="@+id/action_doctorsListFragment_to_mainMenuFragment"
             app:destination="@id/mainMenuFragment" />
+        <action
+            android:id="@+id/action_doctorsListFragment_to_doctorsDetailedFragment"
+            app:destination="@id/doctorsDetailedFragment" />
     </fragment>
     <fragment
         android:id="@+id/historyListFragment"
@@ -101,4 +104,9 @@
             android:name="doctor"
             app:argType="com.github.iamcrysun.dieordie.models.Doctor" />
     </fragment>
+    <fragment
+        android:id="@+id/doctorsDetailedFragment"
+        android:name="com.github.iamcrysun.dieordie.DoctorsDetailedFragment"
+        android:label="fragment_doctors_detailed"
+        tools:layout="@layout/fragment_doctors_detailed" />
 </navigation>
