@@ -118,7 +118,7 @@
         android:layout_marginEnd="20dp"
         android:ems="22"
         android:fontFamily="casual"
-        android:hint="Введите электронную почту"
+        android:hint="Введите вашу дату рождения"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
