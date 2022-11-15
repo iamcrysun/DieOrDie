@@ -88,7 +88,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="40dp"
         android:fontFamily="serif"
-        android:text="@string/email_input_label_text"
+        android:text="Дата рождения:"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
