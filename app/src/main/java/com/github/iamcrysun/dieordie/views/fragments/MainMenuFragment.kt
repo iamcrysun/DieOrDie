@@ -38,11 +38,31 @@ class MainMenuFragment : Fragment() {
         for (i in 0..3) {
             val menuItemView = inflater.inflate(R.layout.main_menu_item, container, false)
             //т.к сейчас дейтсвие перехода рассчитано только для одного пункта меня, то навешиваем его по условию
+            if (i==0) {
+                menuItemView.setOnClickListener {
+                    findNavController().navigate(R.id.action_mainMenuFragment_to_doctorAppointmentFragment)
+                }
+            }
+
             if (i==1) {
                 menuItemView.setOnClickListener {
                     findNavController().navigate(R.id.action_mainMenuFragment_to_doctorsListFragment)
                 }
             }
+
+            if (i==2) {
+                menuItemView.setOnClickListener {
+                    findNavController().navigate(R.id.action_mainMenuFragment_to_historyListFragment)
+                }
+            }
+
+            if (i==3) {
+                menuItemView.setOnClickListener {
+                    findNavController().navigate(R.id.action_mainMenuFragment_to_profileFragment)
+                }
+            }
+
+
             //заголовки списков меню
             val header = menuItemView.findViewById<TextView>(R.id.menu_item_header)
             header.text = menuItemsTitles[i]
