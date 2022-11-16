@@ -8,6 +8,6 @@ import java.util.*
 data class Sees (
     val id: Int,
     val doctor_id: Int,
-    val date: Date,
+    val date: String,
     val info: String,
 ): Parcelable

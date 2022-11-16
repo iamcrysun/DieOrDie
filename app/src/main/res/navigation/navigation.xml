@@ -73,6 +73,9 @@
         <action
             android:id="@+id/action_doctorAppointmentFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_doctorAppointmentFragment_to_doctorsListForAppFragment"
+            app:destination="@id/doctorsListForAppFragment" />
     </fragment>
     <fragment
         android:id="@+id/doctorsListFragment"
@@ -127,5 +130,29 @@
         <action
             android:id="@+id/action_resultFragment_to_mainMenuFragment"
             app:destination="@id/mainMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorsListForAppFragment"
+        android:name="com.github.iamcrysun.dieordie.DoctorsListForAppFragment"
+        android:label="fragment_doctors_list_for_app"
+        tools:layout="@layout/fragment_doctors_list_for_app" >
+        <action
+            android:id="@+id/action_doctorsListForAppFragment_to_doctorAppointmentFragment"
+            app:destination="@id/doctorAppointmentFragment" />
+        <action
+            android:id="@+id/action_doctorsListForAppFragment_to_detailedListOfDoctorsInAppFragment"
+            app:destination="@id/detailedListOfDoctorsInAppFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailedListOfDoctorsInAppFragment"
+        android:name="com.github.iamcrysun.dieordie.DetailedListOfDoctorsInAppFragment"
+        android:label="fragment_detailed_list_of_doctors_in_app"
+        tools:layout="@layout/fragment_detailed_list_of_doctors_in_app" >
+        <action
+            android:id="@+id/action_detailedListOfDoctorsInAppFragment_to_doctorsListForAppFragment"
+            app:destination="@id/doctorsListForAppFragment" />
+        <action
+            android:id="@+id/action_detailedListOfDoctorsInAppFragment_to_doctorAppointmentFragment"
+            app:destination="@id/doctorAppointmentFragment" />
     </fragment>
 </navigation>

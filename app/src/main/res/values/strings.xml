@@ -9,4 +9,20 @@
     <string name="email_input_label_text">Электронная почта:</string>
     <string name="password_label_text">Пароль:</string>
     <string name="password_confirm_label_text">Подтверждение пароля</string>
+
+    <string-array name="specializations">
+        <item>Терапевт</item>
+        <item>Педиатр</item>
+        <item>Логопед</item>
+        <item>Хирург</item>
+        <item>Окулист</item>
+        <item>Невролог</item>
+        <item>Психолог</item>
+        <item>Кардиолог</item>
+        <item>Онколог</item>
+        <item>Уролог</item>
+
+    </string-array>
+
+
 </resources>
