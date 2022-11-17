@@ -97,6 +97,9 @@
         <action
             android:id="@+id/action_historyListFragment_to_mainMenuFragment"
             app:destination="@id/mainMenuFragment" />
+        <action
+            android:id="@+id/action_historyListFragment_to_historyDetailedFragment"
+            app:destination="@id/historyDetailedFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -106,9 +109,6 @@
         <action
             android:id="@+id/action_profileFragment_to_mainMenuFragment"
             app:destination="@id/mainMenuFragment" />
-        <argument
-            android:name="doctor"
-            app:argType="com.github.iamcrysun.dieordie.models.Doctor" />
     </fragment>
     <fragment
         android:id="@+id/doctorsDetailedFragment"
@@ -124,7 +124,7 @@
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.github.iamcrysun.dieordie.ResultFragment"
+        android:name="com.github.iamcrysun.dieordie.views.fragments.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result" >
         <action
@@ -154,5 +154,17 @@
         <action
             android:id="@+id/action_detailedListOfDoctorsInAppFragment_to_doctorAppointmentFragment"
             app:destination="@id/doctorAppointmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyDetailedFragment"
+        android:name="com.github.iamcrysun.dieordie.views.fragments.HistoryDetailedFragment"
+        android:label="fragment_history_detailed"
+        tools:layout="@layout/fragment_history_detailed" >
+        <action
+            android:id="@+id/action_historyDetailedFragment_to_historyListFragment"
+            app:destination="@id/historyListFragment" />
+        <argument
+            android:name="history_item"
+            app:argType="com.github.iamcrysun.dieordie.models.Sees" />
     </fragment>
 </navigation>

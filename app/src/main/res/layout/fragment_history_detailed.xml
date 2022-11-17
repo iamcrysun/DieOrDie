@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_background"
-    tools:context=".views.fragments.DoctorsDetailedFragment">
+    tools:context=".views.fragments.HistoryDetailedFragment">
 
 
     <TextView
@@ -26,7 +26,7 @@
         tools:ignore="TextContrastCheck" />
 
     <Button
-        android:id="@+id/back_to_doctors"
+        android:id="@+id/back_to_history"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -41,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/docs_name"
+        android:id="@+id/docs_name1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -51,22 +51,23 @@
         app:layout_constraintTop_toBottomOf="@+id/name_string3" />
 
     <TextView
-        android:id="@+id/docs_spec"
+        android:id="@+id/history_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="docs_spec"
+        android:text="info"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/docs_name" />
+        app:layout_constraintTop_toBottomOf="@+id/docs_name1" />
 
     <TextView
-        android:id="@+id/docs_info"
+        android:id="@+id/special"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Info"
+        android:layout_marginTop="32dp"
+        android:text="Doctors_spec"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/docs_spec" />
+        app:layout_constraintTop_toBottomOf="@+id/history_info" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
