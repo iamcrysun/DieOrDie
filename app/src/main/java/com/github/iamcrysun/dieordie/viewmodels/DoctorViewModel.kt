@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 
 class DoctorViewModel(application: Application): AndroidViewModel(application) {
     private val repository: DoctorRepository
-    private val getAll: LiveData<List<Doctor>>
+    val getAll: LiveData<List<Doctor>>
 
     init {
         val doctorDao = DieDB.Instance(application).doctorDao()

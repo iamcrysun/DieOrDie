@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 
 class SeeViewModel(application: Application): AndroidViewModel(application) {
     private val repository: SeeRepository
-    private val getAll: LiveData<List<See>>
+    val getAll: LiveData<List<See>>
 
     init {
         val seeDao = DieDB.Instance(application).seeDao()
