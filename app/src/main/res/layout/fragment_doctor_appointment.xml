@@ -144,6 +144,7 @@
         android:layout_marginTop="16dp"
         android:entries="@array/specializations"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spec" />
+        app:layout_constraintTop_toBottomOf="@+id/spec"
+        tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
