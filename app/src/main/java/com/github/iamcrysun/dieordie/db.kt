@@ -9,7 +9,7 @@ import com.github.iamcrysun.dieordie.daos.SeeDao
 import com.github.iamcrysun.dieordie.models.Doctor
 import com.github.iamcrysun.dieordie.models.See
 
-@Database(entities = [Doctor::class, See::class], version = 1)
+@Database(entities = [Doctor::class, See::class], version = 1, exportSchema = false)
 abstract class DieDB : RoomDatabase() {
     abstract fun doctorDao(): DoctorDao
     abstract fun seeDao(): SeeDao
