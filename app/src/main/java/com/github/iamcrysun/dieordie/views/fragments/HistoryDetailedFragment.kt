@@ -18,7 +18,7 @@ class HistoryDetailedFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_history_detailed, container, false)
 
-        view.findViewById<TextView>(R.id.docs_name1).text = args.historyItem.doctor_id.toString()
+        view.findViewById<TextView>(R.id.docs_name1).text = args.historyItem.doctor.toString()
         view.findViewById<TextView>(R.id.history_info).text = args.historyItem.info
         view.findViewById<TextView>(R.id.special).text = args.historyItem.date
 

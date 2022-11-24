@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.github.iamcrysun.dieordie.R
-import com.github.iamcrysun.dieordie.models.Sees
+import com.github.iamcrysun.dieordie.models.See
 import com.google.firebase.crashlytics.buildtools.reloc.com.google.common.reflect.TypeToken
 import com.google.gson.Gson
 import java.io.BufferedReader
@@ -24,7 +24,7 @@ class HistoryListFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_history_list, container, false)
         //список докторов
-        val data = readDataFromJSON("sees.json")
+        val data = emptyList<See>()
         //
         val adapter = ListAdapterSee()
         val seesListView = view.findViewById<RecyclerView>(R.id.sees_list_view)
@@ -34,17 +34,5 @@ class HistoryListFragment : Fragment() {
         adapter.setData(data)
 
         return view
-    }
-
-    private fun readDataFromJSON(filename: String): List<Sees> {
-        //экземпляр объекта для работы с
-        val gson = Gson()
-        //буффер для чтения
-        val bufferedReader: BufferedReader =
-            requireContext().assets.open(filename).bufferedReader()
-        //читает текст в строку
-        val inputString = bufferedReader.use { it.readText() }
-
-        return gson.fromJson(inputString, object : TypeToken<ArrayList<Sees?>?>() {}.type)
     }
 }

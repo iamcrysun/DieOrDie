@@ -165,6 +165,6 @@
             app:destination="@id/historyListFragment" />
         <argument
             android:name="history_item"
-            app:argType="com.github.iamcrysun.dieordie.models.Sees" />
+            app:argType="com.github.iamcrysun.dieordie.models.See" />
     </fragment>
 </navigation>

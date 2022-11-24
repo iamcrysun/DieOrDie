@@ -1,7 +1,6 @@
 package com.github.iamcrysun.dieordie.views.fragments
 
 import android.annotation.SuppressLint
-import android.media.MediaParser.SeekPoint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
@@ -9,13 +8,10 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.github.iamcrysun.dieordie.R
-
-import com.github.iamcrysun.dieordie.models.Sees
-import com.github.iamcrysun.dieordie.views.fragments.DoctorsDetailedFragmentDirections
-import com.github.iamcrysun.dieordie.views.fragments.doctors_list.DoctorsListFragmentDirections.Companion.actionDoctorsListFragmentToDoctorsDetailedFragment
+import com.github.iamcrysun.dieordie.models.See
 
 class ListAdapterSee : RecyclerView.Adapter<SeeViewHolder>() {
-    private var seesList = emptyList<Sees>()
+    private var seesList = emptyList<See>()
     //строка списка
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SeeViewHolder {
         return SeeViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.see_item, parent, false))
@@ -34,7 +30,7 @@ class ListAdapterSee : RecyclerView.Adapter<SeeViewHolder>() {
     }
     //
     @SuppressLint("NotifyDataSetChanged")
-    fun setData(sees: List<Sees>) {
+    fun setData(sees: List<See>) {
         this.seesList = sees
         notifyDataSetChanged()
     }
