@@ -2,6 +2,7 @@ package com.github.iamcrysun.dieordie.views.fragments.doctors_list
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.findNavController
@@ -22,6 +23,7 @@ class ListAdapter : RecyclerView.Adapter<DoctorCardViewHolder>() {
 
         holder.itemView.findViewById<TextView>(R.id.doctor_name).text = current.fullName
         holder.itemView.findViewById<TextView>(R.id.doctor_info).text = current.info
+        holder.itemView.findViewById<ImageView>(R.id.photo).setImageBitmap(current.photo)
 
         holder.itemView.findViewById<ConstraintLayout>(R.id.doctor_card_item).setOnClickListener{
             val action = DoctorsListFragmentDirections.actionDoctorsListFragmentToDoctorsDetailedFragment(current)

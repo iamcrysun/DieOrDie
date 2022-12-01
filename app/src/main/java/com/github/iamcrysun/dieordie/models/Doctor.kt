@@ -1,5 +1,6 @@
 package com.github.iamcrysun.dieordie.models
 
+import android.graphics.Bitmap
 import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -13,4 +14,5 @@ data class Doctor (
     val fullName: String,
     val specialization: String,
     val info: String,
+    val photo: Bitmap
 ): Parcelable
