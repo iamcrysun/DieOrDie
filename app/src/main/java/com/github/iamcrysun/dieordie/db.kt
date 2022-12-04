@@ -7,15 +7,18 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.github.iamcrysun.dieordie.daos.DoctorDao
 import com.github.iamcrysun.dieordie.daos.SeeDao
+import com.github.iamcrysun.dieordie.daos.UserDao
 import com.github.iamcrysun.dieordie.models.Doctor
 import com.github.iamcrysun.dieordie.models.See
+import com.github.iamcrysun.dieordie.models.User
 import com.github.iamcrysun.dieordie.utils.converters.BitmapConverter
 
-@Database(entities = [Doctor::class, See::class], version = 1, exportSchema = false)
+@Database(entities = [Doctor::class, See::class, User::class], version = 1, exportSchema = false)
 @TypeConverters(value = [BitmapConverter::class])
 abstract class DieDB : RoomDatabase() {
     abstract fun doctorDao(): DoctorDao
     abstract fun seeDao(): SeeDao
+    abstract fun userDao(): UserDao
 
     companion object {
         @Volatile
@@ -34,6 +37,7 @@ abstract class DieDB : RoomDatabase() {
                         DieDB::class.java,
                         "dieordiedb"
                     )
+                    .allowMainThreadQueries()
                     .build()
 
                 _instance = instance
